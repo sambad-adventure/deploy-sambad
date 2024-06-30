@@ -13,6 +13,10 @@
       "cache": false,
       "persistent": true
     },
+    "web#dev": {
+      "cache": false,
+      "persistent": true
+    },
     "web#build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env", ".env.*"],
