@@ -1,8 +1,7 @@
 {
   "extends": "@sambad/typescript-config/react-library.json",
   "compilerOptions": {
-    "outDir": "dist",
-    "types": ["@emotion/react/types/css-prop"]
+    "outDir": "dist"
   },
   "include": ["src", "tanstack"],
   "exclude": ["node_modules", "dist"]

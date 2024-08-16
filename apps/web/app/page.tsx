@@ -1,3 +1,3 @@
-export default function MainPage() {
+export default function Second() {
   return <div></div>;
 }

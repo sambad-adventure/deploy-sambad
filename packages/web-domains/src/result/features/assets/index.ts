@@ -1,1 +1,0 @@
-export { SadUserIcon } from './SadUserIcon';

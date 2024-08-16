@@ -3,40 +3,27 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
-    "./new-meeting": "./src/new-meeting/index.ts",
-    "./answer": "./src/answer/index.ts",
-    "./home": "./src/home/index.ts",
-    "./user": "./src/user/index.ts",
-    "./participate-meeting": "./src/participate-meeting/index.ts",
-    "./common": "./src/common/index.ts",
-    "./relay-question": "./src/relay-question/index.ts",
-    "./about-me": "./src/about-me/index.ts",
-    "./result": "./src/result/index.ts"
+    "./first-domain": "./src/first-domain/index.ts",
+    "./second-domain": "./src/second-domain/index.ts",
+    "./commmon": "./src/common/index.ts"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@tanstack/react-query": "^5.50.1",
-    "@toss/use-overlay": "^1.4.0",
-    "axios": "^1.7.2",
-    "react-copy-to-clipboard": "^5.1.0",
-    "react-hook-form": "^7.52.1",
-    "react-countdown": "^2.3.5",
-    "@sambad/css-utils": "workspace:*"
+    "axios": "^1.7.2"
   },
   "devDependencies": {
-    "@sambad/eslint-config": "workspace:*",
     "@sambad/sds": "workspace:*",
+    "@sambad/eslint-config": "workspace:*",
     "@sambad/typescript-config": "workspace:*",
     "@sambad/types-utils": "workspace:*",
-    "@types/eslint": "^8.56.5",
     "@types/node": "^20.11.24",
-    "@types/react-copy-to-clipboard": "^5.0.7",
-    "@types/qs": "^6.9.15",
+    "@types/eslint": "^8.56.5",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
+    "@types/qs": "^6.9.15",
     "eslint": "^8.57.0",
     "react": "^18",
     "typescript": "^5.3.3"

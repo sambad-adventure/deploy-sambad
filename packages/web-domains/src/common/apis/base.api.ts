@@ -1,11 +1,8 @@
 import axios from 'axios';
-
-export const baseURL =
-  process.env.NEXT_PUBLIC_STAGE === 'production' ? 'https://api.moring.one' : `https://dev-api.moring.one`;
+const baseURL = `/api`;
 
 const axiosInstance = axios.create({
   baseURL: baseURL,
-  withCredentials: true,
 });
 
 export class Http {
