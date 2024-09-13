@@ -10,7 +10,7 @@ import { STEPS } from '@/user/common/constants/step';
 import { useGoNextStep } from '../../hooks/useGoNextStep';
 import { CheckboxGroup } from '../Checkbox';
 
-import { buttonWrapperCss } from './styles';
+import { buttonWrapperCss, formLayoutcss } from './styles';
 
 interface HobbiesFormProps {
   hobbyList?: HobbyType[];
@@ -42,16 +42,13 @@ export const HobbiesInfoForm = ({ hobbyList }: HobbiesFormProps) => {
   if (!hobbyList || !hobbyList.length) return null;
 
   return (
-    <form onSubmit={handleSubmit(goToNextPage)} css={{ padding: '0 20px', marginTop: '48px' }}>
+    <form onSubmit={handleSubmit(goToNextPage)} css={formLayoutcss}>
       <div css={{ display: 'inline-flex', flexWrap: 'wrap', gap: '10px' }}>
         <Controller
           name="hobbyIds"
           control={control}
-          rules={{
-            validate: (value) => value.length <= 3 || '최대 3개까지 선택할 수 있습니다',
-          }}
           render={({ field: { value, onChange } }) => (
-            <CheckboxGroup value={value} onValueChange={onChange} maxLength={3}>
+            <CheckboxGroup value={value} onValueChange={onChange}>
               {hobbyList?.map(({ hobbyId, content }) => (
                 <CheckboxGroup.Item
                   key={hobbyId}
